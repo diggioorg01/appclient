@@ -13,12 +13,13 @@ jobs:
         
       - name: Archive test artifacts
         uses: actions/upload-artifact@v4
+        id: artifact-k6-upload
         with:
           name: k6test-${{ github.run_id }}
           path: k6_test
           
       - name: Output artifact URL
-        run:  echo 'Artifact URL is ${{ steps.artifact-upload-step.outputs.artifact-url }}'
+        run:  echo 'Artifact URL is ${{ steps.artifact-k6-upload.outputs.artifact-url }}'
       
       - name: Trigger Workflow in Another Repository
         run: |
