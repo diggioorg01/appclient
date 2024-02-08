@@ -15,4 +15,4 @@ trigger-repob-workflow:
             repo: 'worflowremote',
             workflow_id: 'blank.yml',
             ref: 'main'
-        }) 
+        });
