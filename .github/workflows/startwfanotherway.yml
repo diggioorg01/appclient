@@ -3,16 +3,16 @@ name: Trigger Repo B GitHub workflow
 on:
   workflow_dispatch:
 jobs:
-trigger-repob-workflow:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/github-script@v6
-    with:
-        github-token: ${{ secrets.PAT }} # Fine-grained GitHub PAT that was saved as repository secret
-        script: |
-        await github.rest.actions.createworkflowDispatch({
-            owner: 'diggioorg02',
-            repo: 'worflowremote',
-            workflow_id: 'blank.yml',
-            ref: 'main'
-        });
+  trigger-repob-workflow:
+      runs-on: ubuntu-latest
+        steps:
+        - uses: actions/github-script@v6
+          with:
+              github-token: ${{ secrets.PAT }} # Fine-grained GitHub PAT that was saved as repository secret
+              script: |
+                  await github.rest.actions.createworkflowDispatch({
+                      owner: 'diggioorg02',
+                      repo: 'worflowremote',
+                      workflow_id: 'blank.yml',
+                      ref: 'main'
+                  });
