@@ -5,7 +5,7 @@ on:
 jobs:
   trigger-repob-workflow:
       runs-on: ubuntu-latest
-        steps:
+      steps:
         - uses: actions/github-script@v6
           with:
               github-token: ${{ secrets.PAT }} # Fine-grained GitHub PAT that was saved as repository secret
