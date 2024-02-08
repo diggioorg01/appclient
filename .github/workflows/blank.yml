@@ -17,6 +17,9 @@ jobs:
           name: k6test-${{ github.run_id }}
           path: k6_test
           
+      - name: Output artifact URL
+        run:  echo 'Artifact URL is ${{ steps.artifact-upload-step.outputs.artifact-url }}'
+      
       - name: Trigger Workflow in Another Repository
         run: |
           # Set the required variables
