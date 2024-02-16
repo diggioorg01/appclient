@@ -41,7 +41,10 @@ jobs:
 
       - name: Ger remote workflow status 
         run: |
-
+          repo_owner="diggioorg02" 
+          repo_name="worflowremote"  
+          distinct_id="${{ github.run_id }}"
+          
           sleep 10 && \
           curl -L \
             -H "Accept: application/vnd.github+json" \
