@@ -5,4 +5,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: diggioorg02/worflowremote/blob/main/.github/workflows/templateclienteowf.yml@main
+    uses: diggioorg02/worflowremote/.github/workflows/templateclienteowf.yml@main
