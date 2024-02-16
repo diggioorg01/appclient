@@ -4,5 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow:
+  call-workflow-passing-data:
     uses: diggioorg02/worflowremote/.github/workflows/templateclienteowf.yml@main
+    secrets:
+      access-token: ${{ secrets.PAT }}
